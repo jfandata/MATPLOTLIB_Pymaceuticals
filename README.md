@@ -21,7 +21,7 @@ The purpose of this project is to analyize and compare a cancer drug study done 
 ## Project Description
 This project analyzed the treatment data to compare the level of treatment response among three drug treatments and a placebo. Graphs were created to visualize the data results. Visual analysis allows easy reading of trending data such as the effect of drug treatments on metastatic spread, survival rate of mice during treatment and tumor changes at the end of treatment. 
 
-Observations:
+### Observations:
     1. The placebo and drugs Infabinol and Ketapril resulted in increasing tumor growth over time. Only drug Capomulin shows effectively decreasing the volume (size) of the tumor.
     
     ![Tumor Response to Treatment](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/Results/tumor_response.jpg)
