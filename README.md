@@ -24,7 +24,7 @@ This project analyzed the treatment data to compare the level of treatment respo
 ### Observations:
     1. The placebo and drugs Infabinol and Ketapril resulted in increasing tumor growth over time. Only drug Capomulin shows effectively decreasing the volume (size) of the tumor.
     
-    ![Tumor Response to Treatment](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/Results/tumor_response.jpg)
+    !(https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/Results/tumor_response.jpg)
 
 ## Needs of this Project
 
