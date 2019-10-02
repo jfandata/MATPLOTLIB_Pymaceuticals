@@ -47,8 +47,8 @@ This project analyzed the treatment data to compare the level of treatment respo
 
 ## Contents of Project Repository
 
-1. Raw Data is being kept [here](https://github.com/jfandata/Washington_University_Data_Analytics_Certificate/tree/master/projects/Matplotlib/Pymaceuticals/data) within this repo.
+1. Raw Data is being kept [here](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/tree/master/data) within this repo.
 
-2. Data processing/transformation scripts and results are being kept [here](https://github.com/jfandata/Washington_University_Data_Analytics_Certificate/tree/master/projects/Matplotlib/Pymaceuticals)
+2. Data processing/transformation scripts and results are being kept [here](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/pymaceuticals_starter.ipynb)
 
 ## Key Takeaways
