@@ -49,6 +49,47 @@ This project analyzed the treatment data to compare the level of treatment respo
 
 1. Raw Data is being kept [here](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/tree/master/data) within this repo.
 
-2. Data processing/transformation scripts and results are being kept [here](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/pymaceuticals_starter.ipynb)
+2. Data processing/transformation scripts and results are kept [here](https://github.com/jfandata/MATPLOTLIB_Pymaceuticals/blob/master/pymaceuticals_starter.ipynb)
 
 ## Key Takeaways
+
+1. Dependencies and setup.
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import os
+import csv
+```
+
+2. Minor data munging to re-format the data frames.
+```python
+means=mean_df.unstack(0)
+means_df=means["Tumor Volume (mm3)"] #goes down a level
+```
+
+3. Generate the plot (with Error Bars) and save the figure.
+```python
+error = stderr["Tumor Volume (mm3)"]["Capomulin"]
+c=plt.errorbar(x_axis, means_df["Capomulin"], yerr=error, fmt="o", ls="dotted", color="blue")
+
+error = stderr["Tumor Volume (mm3)"]["Infubinol"]
+i=plt.errorbar(x_axis, means_df["Infubinol"], yerr=error, fmt="^", ls="dotted", color="red")
+
+error = stderr["Tumor Volume (mm3)"]["Ketapril"]
+k=plt.errorbar(x_axis, means_df["Ketapril"], yerr=error, fmt="s", ls="dotted", color="black")
+
+error = stderr["Tumor Volume (mm3)"]["Placebo"]
+p=plt.errorbar(x_axis, means_df["Placebo"], yerr=error, fmt="d", ls="dotted", color="green")
+
+plt.title("Tumor Response to Treatment")
+plt.xlabel("Time (Days)")
+plt.ylabel("Tumor Volume (mm3)")
+plt.grid(linestyle="-")
+plt.legend((c,i,k,p),("Capomulin", "Infubinol", "Ketapril", "Placebo"))
+plt.show()
+
+# Save the Figure
+plt.savefig("tumor_response.jpg")
+```
